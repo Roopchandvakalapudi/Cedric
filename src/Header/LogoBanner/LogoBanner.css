@@ -1,0 +1,33 @@
+.logo-banner {
+  top: 0;
+  left: 0;
+  width: 25%;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+  top: 0px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-height: 62px;
+}
+
+@media (max-width: 768px) {
+  .logo-banner {
+    width: 50%;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-banner {
+    width: 100%;
+    max-width: 125px;
+    justify-content: center;
+  }
+}
