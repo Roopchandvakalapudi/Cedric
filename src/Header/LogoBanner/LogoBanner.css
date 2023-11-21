@@ -1,20 +1,18 @@
 .logo-banner {
+  position: absolute;
   top: 0;
   left: 0;
   width: 25%;
   max-width: 200px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   padding: 10px;
   box-sizing: border-box;
-  top: 0px;
 }
 
 .logo {
-  width: 100%;
+  width: 100%; /* Adjusted width to fill the container */
   height: auto;
-  max-height: 62px;
 }
 
 @media (max-width: 768px) {

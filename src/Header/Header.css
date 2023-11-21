@@ -1,6 +1,7 @@
 .icon-container {
+  position: fixed;
   top: 15px;
-  right: 0;
+  right: 0; /* Adjusted to position on the right side */
   padding: 10px;
   display: flex;
   flex-direction: row;
