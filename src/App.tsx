@@ -5,8 +5,12 @@ import Header from './Header/Header';
 function App() {
   return (
     <>
-      <Header />
-      <Chat/>
+      <div>
+        <Header />
+      </div>
+      <div>
+        <Chat />
+      </div>
     </>
   );
 }
