@@ -8,7 +8,7 @@ function App() {
       <div>
         <Header />
       </div>
-      <div>
+      <div className='chat-box-content'>
         <Chat />
       </div>
     </>

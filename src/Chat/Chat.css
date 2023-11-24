@@ -1,0 +1,108 @@
+.chat-box-content{
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+}
+.container{
+    max-width: 930px;
+    margin: 0 auto;
+}
+.chat-box-question{
+    text-align: right;
+}
+.chat-box-question h2{
+    display: inline-block;
+    padding: 20px;
+    background-color: #E5F7FC;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+    border-radius: 20px;
+    margin: 0;
+}
+.chat-box-answer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+.chat-logo{
+    width: 3%;
+}
+.chat-logo img{
+    width: 28px;
+    height: 28px;
+}
+.chat-answer{
+    width: 95%;
+    text-align: left;
+}
+.input-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 57px;
+    margin-bottom: 45px;
+}
+
+.input-talk-to-me{
+    position: relative;
+    width: 65%;
+    display: flex;
+}
+.input-talk-to-me input{
+    padding: 20px;
+    padding-right: 55px;
+    width: 100%;
+    display: block;
+    background: #ffffff;
+    border: 0;
+    box-shadow: 0 0 20px #DDDDDD;
+    border-radius: 30px;
+    font-size: 20px;
+    line-height: 1;
+}
+.input-talk-to-me input:focus-visible{
+    outline: inherit;
+}
+.input-talk-to-me button{
+    position: absolute;
+    top: 54%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    right: 20px;
+    background: inherit;
+    outline: inherit;
+    border: 0;
+    box-shadow: 0 0 0;
+    padding: 0 0;
+}
+.input-talk-to-me button:focus, .input-talk-to-me button:focus-visible{
+    outline: inherit;
+}
+.input-talk-to-me button img{
+    width: 25px;
+}
+.chat-mic{
+    width: 10%;
+    text-align: left;
+    padding-left: 25px;
+}
+.chat-mic button{
+    background: inherit;
+    outline: inherit;
+    border: 0;
+    box-shadow: 0 0 0;
+    padding: 0 0;
+}
+.chat-mic button img{
+    width: 22px;
+    height: auto;
+}
+.chat-mic button:focus, .chat-mic button:focus-visible{
+    outline: inherit;
+}

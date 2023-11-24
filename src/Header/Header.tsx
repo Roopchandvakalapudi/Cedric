@@ -7,7 +7,7 @@ import Team from './Icons/Team';
 const Header: React.FC = () => {
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div className='header-main'>
         <LogoBanner />
         <div className='icon-container'>
           <Bookmark />
