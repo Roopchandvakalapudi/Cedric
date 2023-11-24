@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Chat.css';
-import send from '../Icons/send.png';
-import mic from '../Icons/microphone.png';
+import send from '../Icons/send.svg';
+import mic from '../Icons/microphone.svg';
 import logo from '../Icons/favicon.png';
 
 interface QA {
@@ -17,7 +17,7 @@ const Data = [
   {
     question: 'How does React work?',
     answer:
-      'React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components.',
+      'React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components. React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components. React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components.React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components.React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components.React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components. ',
   },
 ];
 
@@ -53,14 +53,18 @@ const Chat: React.FC = () => {
       <div className='chat-box'>
         {chatData.map((qa) => (
           <>
-            <div>{qa.question}</div>
-            <div>
-              <img src={logo} className='logo' /> {qa.answer}
+            <div className='chat-box-question'>
+              <h2>{qa.question}</h2>
+            </div>
+            <div className='chat-box-answer'>
+              <div className='chat-logo'><img src={logo} /></div> 
+              <div className='chat-answer'>{qa.answer}</div>
             </div>
           </>
         ))}
       </div>
       <div className='input-container'>
+        <div className='input-talk-to-me'>
         <input
           className='input-field'
           type='text'
@@ -71,9 +75,13 @@ const Chat: React.FC = () => {
         <button onClick={handleQuestionSubmit}>
           <img src={send} className='send-btn' />
         </button>
-        <button>
-          <img src={mic} className='mic-btn' />
-        </button>
+        </div>
+        <div className='chat-mic'>
+          <button>
+            <img src={mic} className='mic-btn' />
+          </button>
+        </div>
+        
       </div>
     </div>
   );

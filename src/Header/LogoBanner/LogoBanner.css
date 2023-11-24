@@ -1,17 +1,5 @@
-.logo-banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 25%;
-  max-width: 200px;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
 .logo {
-  width: 100%; /* Adjusted width to fill the container */
+  width: 130px; /* Adjusted width to fill the container */
   height: auto;
 }
 
