@@ -11,19 +11,19 @@ interface QA {
 
 const Data = [
   {
-    question: 'What is your name?',
-    answer: "I am an assistant created with React and OpenAI's GPT-3.",
+    question: 'Hi',
+    answer: "Hello, I'm Cedric. How Can I help you?",
   },
   {
-    question: 'How does React work?',
-    answer:
-      'React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components. React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components. React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components.React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components.React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components.React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components. ',
+    question: 'What is your Name',
+    answer: 'My Name is Cedric',
   },
 ];
 
 const Chat: React.FC = () => {
   const [chatData, setChatData] = useState<QA[]>([]);
   const [currentQuestion, setCurrentQuestion] = useState<string>('');
+  const [userSubmitted, setUserSubmitted] = useState<boolean>(false);
 
   useEffect(() => {
     setChatData(Data.slice(0, 0));
@@ -46,42 +46,59 @@ const Chat: React.FC = () => {
 
     // Clear the input field
     setCurrentQuestion('');
+    setUserSubmitted(true);
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && currentQuestion.trim() !== '') {
+      handleQuestionSubmit();
+    }
   };
 
   return (
     <div className='container'>
       <div className='chat-box'>
-        {chatData.map((qa) => (
+        {userSubmitted ? (
+          chatData.map((qa) => (
+            <>
+              <div className='chat-box-question'>
+                <h2>{qa.question}</h2>
+              </div>
+              <div className='chat-box-answer'>
+                <div className='chat-logo'>
+                  <img src={logo} />
+                </div>
+                <div className='chat-answer'>{qa.answer}</div>
+              </div>
+            </>
+          ))
+        ) : (
           <>
-            <div className='chat-box-question'>
-              <h2>{qa.question}</h2>
-            </div>
-            <div className='chat-box-answer'>
-              <div className='chat-logo'><img src={logo} /></div> 
-              <div className='chat-answer'>{qa.answer}</div>
-            </div>
+            <p>Hi, I'm Cedric, your strategically insightful assistant!</p>
+            <p>I can help you get answers to your questions.</p>
+            <p>What would you like to ask me?</p>
           </>
-        ))}
+        )}
       </div>
       <div className='input-container'>
         <div className='input-talk-to-me'>
-        <input
-          className='input-field'
-          type='text'
-          value={currentQuestion}
-          onChange={(e) => setCurrentQuestion(e.target.value)}
-          placeholder='Talk to me'
-        />
-        <button onClick={handleQuestionSubmit}>
-          <img src={send} className='send-btn' />
-        </button>
+          <input
+            className='input-field'
+            type='text'
+            value={currentQuestion}
+            onChange={(e) => setCurrentQuestion(e.target.value)}
+            onKeyDown={handleKeyPress}
+            placeholder='Talk to me'
+          />
+          <button onClick={handleQuestionSubmit}>
+            <img src={send} className='send-btn' />
+          </button>
         </div>
         <div className='chat-mic'>
           <button>
             <img src={mic} className='mic-btn' />
           </button>
         </div>
-        
       </div>
     </div>
   );
