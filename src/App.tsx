@@ -5,7 +5,7 @@ import Header from './Header/Header';
 function App() {
   return (
     <>
-      <div>
+      <div class="header-block">
         <Header />
       </div>
       <div className='chat-box-content'>
