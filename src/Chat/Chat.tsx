@@ -74,9 +74,11 @@ const Chat: React.FC = () => {
           ))
         ) : (
           <>
+          <div className='cedric-content'>
             <p>Hi, I'm Cedric, your strategically insightful assistant!</p>
             <p>I can help you get answers to your questions.</p>
             <p>What would you like to ask me?</p>
+          </div>
           </>
         )}
       </div>
