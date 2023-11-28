@@ -3,8 +3,19 @@
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+  min-height: 100vh;
   text-align: center;
-  height: 90vh;
+  background: rgb(4,82,191); /* Old browsers */
+        background: -moz-linear-gradient(left,  rgba(4,82,191,0.8) 0%, rgba(4,82,191,0.8) 29%, rgba(0,53,155,0.8) 65%, rgba(205,18,138,0.8) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(4,82,191,0.8) 0%,rgba(4,82,191,0.8) 29%,rgba(0,53,155,0.8) 65%,rgba(205,18,138,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(4,82,191,0.8) 0%,rgba(4,82,191,0.8) 29%,rgba(0,53,155,0.8) 65%,rgba(205,18,138,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0452bf', endColorstr='#cd128a',GradientType=1 ); 
+}
+@media (max-width: 480px){
+  #root {
+    padding: 18px 20px;
+  }
+  
 }
 .header-block{
   position: relative;
