@@ -64,17 +64,17 @@ const Chat: React.FC = () => {
               <div className='chat-box-question'>
                 <h2>{qa.question}</h2>
               </div>
-              <div className='chat-box-answer'>
+              <div className='chat-box-answer d-flex'>
                 <div className='chat-logo'>
                   <img src={logo} />
                 </div>
-                <div className='chat-answer'>{qa.answer}</div>
+                <div className='chat-answer text-start'>{qa.answer}</div>
               </div>
             </>
           ))
         ) : (
           <>
-          <div className='cedric-content'>
+          <div className='cedric-content text-start'>
             <p>Hi, I'm Cedric, your strategically insightful assistant!</p>
             <p>I can help you get answers to your questions.</p>
             <p>What would you like to ask me?</p>
@@ -82,8 +82,8 @@ const Chat: React.FC = () => {
           </>
         )}
       </div>
-      <div className='input-container'>
-        <div className='input-talk-to-me'>
+      <div className='input-container d-flex flex-wrap justify-content-between align-items-center'>
+        <div className='input-talk-to-me d-flex col-11'>
           <input
             className='input-field'
             type='text'
@@ -96,7 +96,7 @@ const Chat: React.FC = () => {
             <img src={send} className='send-btn' />
           </button>
         </div>
-        <div className='chat-mic'>
+        <div className='chat-mic text-start col-1'>
           <button>
             <img src={mic} className='mic-btn' />
           </button>

@@ -7,57 +7,52 @@
 }
 
 .container{
-    max-width: 930px;
+    max-width: 918px;
     margin: 0 auto;
 }
 .chat-box{
-    width: 80%;
-    margin: 0 auto;
+    margin: 43px auto 0;
+    height: 320px;
+    overflow: auto;
+    scrollbar-width: none;
 }
-
+.chat-box::-webkit-scrollbar {
+    display: none;
+}
 .chat-box-question{
     text-align: right;
 }
 .chat-box-question h2{
     display: inline-block;
-    padding: 20px;
+    padding: 24px 30px;
     background-color: #E5F7FC;
     font-size: 20px;
     line-height: 26px;
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 14px;
     margin: 0;
 }
 .chat-box-answer{
-    display: flex;
-    flex-wrap: wrap;
     gap: 15px;
     margin: 20px 0;
 }
 .chat-logo{
-    width: 3%;
+    width: 36px;
 }
 .chat-logo img{
     width: 28px;
     height: 28px;
 }
 .chat-answer{
-    width: 95%;
-    text-align: left;
+    width: calc(100% - 36px);
 }
 .input-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     margin-top: 37px;
     margin-bottom: 45px;
 }
 
 .input-talk-to-me{
     position: relative;
-    width: 65%;
-    display: flex;
 }
 .input-talk-to-me input{
     padding: 20px;
@@ -96,8 +91,6 @@
     width: 25px;
 }
 .chat-mic{
-    width: 10%;
-    text-align: left;
     padding-left: 25px;
 }
 .chat-mic button{
@@ -114,15 +107,10 @@
 .chat-mic button:focus, .chat-mic button:focus-visible{
     outline: inherit;
 }
-.cedric-content {
-    text-align: left;
-}
+
 .cedric-content p{margin: 0;}
 @media (max-width: 576px){
     .chat-box-content{
         padding: 20px;
-    }
-    .chat-box{
-        width: 100%;
     }
 }
